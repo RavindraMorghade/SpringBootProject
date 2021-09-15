@@ -20,6 +20,7 @@ public class Employee {
 	private Double salary;
 	private String email;
 	private String password;
+	private String date;
 	public int getId() {
 		return id;
 	}
@@ -50,8 +51,13 @@ public class Employee {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
 	
 	
 	
-
-}
+}	
