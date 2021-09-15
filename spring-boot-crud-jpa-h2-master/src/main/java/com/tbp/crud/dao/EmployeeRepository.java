@@ -8,6 +8,7 @@ import com.tbp.crud.entity.Employee;
 
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
-	public Optional<Employee> findByEmail(String email);
+
+	public Optional<Employee> findByEmailAndPassword(String email, String password);
 
 }

@@ -21,6 +21,8 @@ public interface EmployeeService{
 	 public Employee updateEmployee(Employee employee);
 	 
 	 public String deleteEmployeeById(int id);
+
+	Employee getEmployeeByEmailAndPassword(String email, String password);
 	 
-	 public Employee getEmployeeByEmail(String email, String password);
+	 
 }

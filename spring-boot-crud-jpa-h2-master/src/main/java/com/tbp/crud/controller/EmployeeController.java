@@ -51,7 +51,7 @@ public class EmployeeController {
 	
 	@GetMapping("/getEmpByEmail/{email}/{password}")
 	public Employee getEmployeeByEmail(@PathVariable String email, @PathVariable String password) {
-		return employeeService.getEmployeeByEmail(email, password);
+		return employeeService.getEmployeeByEmailAndPassword(email, password);
 		 
 	}
 	 

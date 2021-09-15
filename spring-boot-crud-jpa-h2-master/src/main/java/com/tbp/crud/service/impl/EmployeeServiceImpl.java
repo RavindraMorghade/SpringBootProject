@@ -56,8 +56,8 @@ public class EmployeeServiceImpl implements EmployeeService{
 	}
 
 	@Override
-	public Employee getEmployeeByEmail(String email, String password) {
-		Optional<Employee> emp = employeeRepository.findByEmail(email);
+	public Employee getEmployeeByEmailAndPassword(String email, String password) {
+		Optional<Employee> emp = employeeRepository.findByEmailAndPassword(email, password);
 		if(!emp.get().getEmail().equals(email) && !emp.get().getPassword().equals(password)) {
 		  System.out.println("Incorrect email or password");	
 		}else {
