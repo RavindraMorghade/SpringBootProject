@@ -1,8 +1,13 @@
 package com.tbp.crud.entity;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +26,17 @@ public class Employee {
 	private String email;
 	private String password;
 	private String date;
+	
+	@OneToMany(targetEntity=Address.class, cascade=CascadeType.ALL)
+	@JoinColumn(name="ea_fk", referencedColumnName="id")
+	private List<Address> addresses;
+	
+	public List<Address> getAddresses() {
+		return addresses;
+	}
+	public void setAddresses(List<Address> addresses) {
+		this.addresses = addresses;
+	}
 	public int getId() {
 		return id;
 	}

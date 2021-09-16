@@ -54,7 +54,12 @@ public class EmployeeController {
 		return employeeService.getEmployeeByEmailAndPassword(email, password);
 		 
 	}
-	 
+	
+	@GetMapping("/findEmpById/{id}")
+	public Employee findByEmpId(@PathVariable int id) {
+		return employeeService.findByEmpId(id);
+		
+	}
 	 
 	 
 }

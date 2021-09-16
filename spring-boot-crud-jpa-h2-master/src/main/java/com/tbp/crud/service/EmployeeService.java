@@ -23,6 +23,8 @@ public interface EmployeeService{
 	 public String deleteEmployeeById(int id);
 
 	Employee getEmployeeByEmailAndPassword(String email, String password);
+
+	Employee findByEmpId(int id);
 	 
 	 
 }
