@@ -74,6 +74,4 @@ public class Employee {
 		this.date = date;
 	}
 	
-	
-	
 }	
